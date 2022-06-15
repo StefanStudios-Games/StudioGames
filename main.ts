@@ -347,3 +347,8 @@ intro = sprites.create(img`
     ..................................................
     ..................................................
     `, SpriteKind.Player)
+intro.setPosition(0, 50)
+intro.setVelocity(150, 0)
+pause(500)
+intro.setVelocity(0, 0)
+intro.setPosition(75, 50)
