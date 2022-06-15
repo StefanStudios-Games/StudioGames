@@ -1021,3 +1021,5 @@ intro,
 100,
 false
 )
+pause(1500)
+intro.destroy()
