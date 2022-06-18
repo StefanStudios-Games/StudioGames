@@ -1,6 +1,8 @@
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sprites.readDataBoolean(intro, "gameSelect") == true) {
-        Selector.x += -64
+        if (Selector.x != 290 - 64 * 6) {
+            Selector.x += -64
+        }
     }
 })
 function introCreate () {
@@ -1157,7 +1159,9 @@ function introCreate () {
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sprites.readDataBoolean(intro, "gameSelect")) {
-        Selector.x += 64
+        if (Selector.x != 290) {
+            Selector.x += 64
+        }
     }
 })
 function callGameSellect () {
