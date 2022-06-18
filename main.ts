@@ -1,6 +1,6 @@
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sprites.readDataBoolean(intro, "gameSelect") == true) {
-        Selector.x += -40
+        Selector.x += -64
     }
 })
 function introCreate () {
@@ -1157,7 +1157,7 @@ function introCreate () {
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sprites.readDataBoolean(intro, "gameSelect")) {
-        Selector.x += 40
+        Selector.x += 64
     }
 })
 function callGameSellect () {
@@ -1410,4 +1410,4 @@ function callGameSellect () {
 }
 let Selector: Sprite = null
 let intro: Sprite = null
-callGameSellect()
+introCreate()
