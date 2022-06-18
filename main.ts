@@ -1,3 +1,10 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (sprites.readDataBoolean(intro, "gameSelect") == true) {
+        if (Selector.x == 290) {
+            sprites.setDataBoolean(intro, "gameSelect", false)
+        }
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (sprites.readDataBoolean(intro, "gameSelect") == true) {
         if (Selector.x != 290 - 64 * 6) {
@@ -1164,6 +1171,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+function callFlappyBird () {
+	
+}
 function callGameSellect () {
     sprites.setDataBoolean(intro, "gameSelect", true)
     scene.setBackgroundImage(img`
