@@ -1573,6 +1573,9 @@ function callGameSellect () {
     sprites.setDataBoolean(intro, "gameSelect", true)
     Selector.setPosition(290, 75)
 }
+sprites.onOverlap(SpriteKind.Flappy, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprite.destroy()
+})
 let FlappyWall: Sprite = null
 let FlappySprite: Sprite = null
 let Selector: Sprite = null
